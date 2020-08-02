@@ -1,0 +1,101 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: rgb(4, 131, 4)
+        }
+        .flex-container {
+         display: flex;
+         flex-direction: row;
+         background-color:grey;
+        }
+
+        .flex-container > div {
+        background-color: green;
+        width: 3000px;
+        margin: 10px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        }
+         ul {
+            list-style-type: none;
+            padding: 10;
+            margin: 50;
+            overflow: hidden;
+            backgroung-color: rgb(21, 211, 21);
+        }
+        li{
+            float:left;
+           
+        }
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration:none;
+            width:180px;
+        }
+        li a:hover{
+            background-color: greenyellow;
+        }
+        table {
+            border:10px solid:black;
+        }
+        td {
+            
+            border:1px solid:black;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+        #bird {
+            float:right;
+        }
+
+        h1 {
+            font-family:Georgia;
+        }
+        
+    </style>
+</head>
+<body>
+    
+<h1 style=text-align:center>BIRDWATCHING <img src="dove.png" id=bird height="50" width="50" /></h1>
+<ul>
+    <li><a class="active" href="#HOME">HOME</a></li>
+    <li><a href="#GET STARTED">GET STARTED</a></li>
+    <li><a href="#PHOTO">PHOTO</a></li>
+    <li><a href="#GEAR">GEAR</a></li>
+     <li><a href="#FORUM">FORUM</a></li>
+  </ul>
+  <div class="flex-container">
+      <div>
+    <h1 style="text-align:center;">WELCOME</h1>
+    <p>Welcome to our fake birdwatching website.  if this were a real site. it would be the ideal place to come to learn more about birdwatching, wheather you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas,tips,and photos with other like minded people</p>
+    <p>So don't waste time! Get what you need,then turn off that computer and get out into the great outdoors!</p>
+    </div>
+    <div class="image">
+        <h1 style="text-align:center">FAVOURITE  PHOTOS</h1>
+        <table>
+            <tr>
+                <td><img src="favorite-1.jpg" height="150" width="150" /></td>
+                <td><img src="favorite-2.jpg" height="150" width="150" /></td>
+            </tr>
+            <tr>
+                <td><img src="favorite-3.jpg" height="150" width="150" /></td>
+                <td><img src="favorite-4.jpg" height="150" width="150" /></td>
+            </tr>
+        </table>
+
+
+
+    </div>
+  </div>
+  <p>This fake wedsite example is CCO-any part of this code may be reused in any way you wish.Original example written by Chris Mills,2016.</p>
+  <p><a href="#Dove Icon">Dove Icon</a> by Lorc.</p>
+  
+</body>
+</html>
