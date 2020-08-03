@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>
+            SQL ASSIGNMENT
+        </title>
+    </head>
+    <body>
+        <p>
+            Microsoft Windows [Version 10.0.18362.959] <br>
+(c) 2019 Microsoft Corporation. All rights reserved.<br>
+
+C:\sqlite>sqlite3 test.db<br>
+SQLite version 3.32.3 2020-06-18 14:00:33<br>
+Enter ".help" for usage hints.<br>
+sqlite> .databases<br>
+main: C:\sqlite\test.db<br>
+sqlite> create table albums(sno int, song text, singer text); <br>
+sqlite> .tables<br>
+albums<br>
+sqlite> insert into customers(sno, song, singer) values ('1', 'lonely','akon');<br>
+Error: no such table: customers<br>
+sqlite> insert into albums(sno, song, singer) values ('1', 'lonely','akon');<br>
+sqlite> insert into albums(sno, song, singer) values ('2', 'uptown funk','bruno mars');<br>
+sqlite> insert into albums(sno, song, singer) values ('3', 'smooth criminal','micheal jackson'); <br>
+sqlite> insert into albums(sno, song, singer) values ('4', 'attention','charlie puth');<br>
+sqlite> insert into albums(sno, song, singer) values ('5', 'despacito','luis fonsi');<br>
+sqlite> insert into albums(sno, song, singer) values ('6', 'shape of you','ed sheeran');<br>
+sqlite> insert into albums(sno, song, singer) values ('7', 'closer','chainsmoker');<br>
+sqlite> insert into albums(sno, song, singer) values ('8', 'international love','chris brown'); <br>
+sqlite> insert into albums(sno, song, singer) values ('9', 'rain over me','pitbull');<br>
+sqlite> insert into albums(sno, song, singer) values ('10', 'not afraid','eminem');<br>
+sqlite> select * from albums<br>
+   ...> ;<br>
+1|lonely|akon<br>
+2|uptown funk|bruno mars<br>
+3|smooth criminal|micheal jackson<br>
+4|attention|charlie puth<br>
+5|despacito|luis fonsi<br>
+6|shape of you|ed sheeran<br>
+7|closer|chainsmoker<br>
+8|international love|chris brown<br>
+9|rain over me|pitbull<br>
+10|not afraid|eminem<br>
+sqlite> create table friends(name text, favsinger text, favsong text);<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('balaji', 'eminem', 'not afraid');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('abzal', 'pitbull', 'lonely');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('aakash', 'micheal jackson', 'smooth criminal');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('akash', 'ed sheeran', 'rain over me'); <br>
+sqlite> insert into friends(name, favsinger, favsong) values ('tonu', 'micheal jackson', 'lonely');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('kumar', 'pitbull', 'rain over me');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('ravi', 'akon', 'uptown funk');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('amit', 'eminem', 'lonely');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('cibi', 'ed sheeran', 'shape of you');<br>
+sqlite> insert into friends(name, favsinger, favsong) values ('jetlee', 'micheal jackson', 'lonely');<br>
+sqlite> select * from friends where favsinger='pitbull';<br>
+abzal|pitbull|lonely<br>
+kumar|pitbull|rain over me<br>
+sqlite> select name from friends where favsong='lonely';<br>
+abzal<br>
+tonu<br>
+amit<br>
+jetlee<br>
+sqlite> select * from friends ;<br>
+balaji|eminem|not afraid<br>
+abzal|pitbull|lonely<br>
+aakash|micheal jackson|smooth criminal<br>
+akash|ed sheeran|rain over me<br>
+tonu|micheal jackson|lonely<br>
+kumar|pitbull|rain over me<br>
+ravi|akon|uptown funk<br>
+amit|eminem|lonely<br>
+cibi|ed sheeran|shape of you<br>
+jetlee|micheal jackson|lonely<br>
+sqlite> create table students(id  int, name text);<br>
+sqlite> insert into students(id, name) values ('101', 'aakash');<br>
+sqlite> insert into students(id, name) values ('102', 'abzal');<br>
+sqlite> insert into students(id, name) values ('103', 'akash');<br>
+sqlite> insert into students(id, name) values ('104', 'amit');<br>
+sqlite> insert into students(id, name) values ('105', 'balaji');<br>
+sqlite> insert into students(id, name) values ('106', 'cibi');<br>
+sqlite> insert into students(id, name) values ('107', 'jetlee');<br>
+sqlite> insert into students(id, name) values ('108', 'kumar');<br>
+sqlite> insert into students(id, name) values ('109', 'liju tony');<br>
+sqlite> insert into students(id, name) values ('110', 'ravi');<br>
+sqlite> select * from students
+   ...> ;
+101|aakash<br>
+102|abzal<br>
+103|akash<br>
+104|amit<br>
+105|balaji<br>
+106|cibi<br>
+107|jetlee<br>
+108|kumar<br>
+109|liju tony<br>
+110|ravi<br>
+sqlite> create table seminars(id int, topics text);<br>
+sqlite> insert into seminars(id, topics) values ('101', 'AI');<br>
+sqlite> insert into seminars(id, topics) values ('102', 'BlockChain');<br>
+sqlite> insert into seminars(id, topics) values ('103', 'python');<br>
+sqlite> insert into seminars(id, topics) values ('104', 'java');<br>
+sqlite> insert into seminars(id, topics) values ('105', 'cyber security');<br>
+sqlite> insert into seminars(id, topics) values ('106', 'networks');<br>
+sqlite> insert into seminars(id, topics) values ('107', 'data management');<br>
+sqlite> insert into seminars(id, topics) values ('108', 'web tech');<br>
+sqlite> insert into seminars(id, topics) values ('109', 'IOT');<br>
+sqlite> insert into seminars(id, topics) values ('110', 'embedded system');<br>
+sqlite> select * from students c inner join seminars s on c.id=s.id;<br>
+101|aakash|101|AI<br>
+102|abzal|102|BlockChain<br>
+103|akash|103|python<br>
+104|amit|104|java<br>
+105|balaji|105|cyber security<br>
+106|cibi|106|networks<br>
+107|jetlee|107|data management<br>
+108|kumar|108|web tech<br>
+109|liju tony|109|IOT<br>
+110|ravi|110|embedded system<br>
+sqlite> create table course(id int, subject text);<br>
+sqlite> insert into course(id, subject) values ('101', 'python');<br>
+sqlite> insert into course(id, subject) values ('102', 'python');<br>
+sqlite> insert into course(id, subject) values ('103', 'c++');<br>
+sqlite> insert into course(id, subject) values ('104', 'python');<br>
+sqlite> insert into course(id, subject) values ('105', 'c');<br>
+sqlite> insert into course(id, subject) values ('106', 'c');<br>
+sqlite> insert into course(id, subject) values ('107', 'c++');<br>
+sqlite> insert into course(id, subject) values ('108', 'c');<br>
+sqlite> insert into course(id, subject) values ('109', 'python');<br>
+sqlite> insert into course(id, subject) values ('110', 'c');<br>
+sqlite> select * from students s inner join course c on s.id=c.id;<br>
+101|aakash|101|python<br>
+102|abzal|102|python<br>
+103|akash|103|c++<br>
+104|amit|104|python<br>
+105|balaji|105|c<br>
+106|cibi|106|c<br>
+107|jetlee|107|c++<br>
+108|kumar|108|c<br>
+109|liju tony|109|python<br>
+110|ravi|110|c<br>
+sqlite> select * from students s inner join course c on s.id=c.id where subject='python';<br>
+101|aakash|101|python<br>
+102|abzal|102|python<br>
+104|amit|104|python<br>
+109|liju tony|109|python<br>
+sqlite> select * from students s inner join course c on s.id=c.id where subject='c';<br>
+105|balaji|105|c<br>
+106|cibi|106|c<br>
+108|kumar|108|c<br>
+110|ravi|110|c<br>
+sqlite> select name from students s inner join course c on s.id=c.id where subject='c';<br>
+balaji<br>
+cibi<br>
+kumar<br>
+ravi<br>
+sqlite> select name from friends order by name;<br>
+aakash<br>
+abzal<br>
+akash<br>
+amit<br>
+balaji<br>
+cibi<br>
+jetlee<br>
+kumar<br>
+ravi<br>
+tonu<br>
+sqlite> select name from friends order by favsinger;<br>
+ravi<br>
+akash<br>
+cibi<br>
+balaji<br>
+amit<br>
+aakash<br>
+tonu<br>
+jetlee<br>
+abzal<br>
+kumar<br>
+sqlite> select * from friends order by favsinger desc;<br>
+abzal|pitbull|lonely<br>
+kumar|pitbull|rain over me<br>
+aakash|micheal jackson|smooth criminal<br>
+tonu|micheal jackson|lonely<br>
+jetlee|micheal jackson|lonely<br>
+balaji|eminem|not afraid<br>
+amit|eminem|lonely<br>
+akash|ed sheeran|rain over me<br>
+cibi|ed sheeran|shape of you<br>
+ravi|akon|uptown funk<br>
+sqlite> .tables<br>
+albums    course    friends   seminars  students<br>
+sqlite><br>
+        </p>
+    </body>
+
+
+
+</html>
